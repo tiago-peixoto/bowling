@@ -7,6 +7,6 @@ class GamesController < ApplicationController
 
   def show
     game = Game.find(params[:id])
-    render json: game.to_json(methods: [:score, :frames]), status: :ok
+    render json: game.to_json(methods: :score), status: :ok
   end
 end
